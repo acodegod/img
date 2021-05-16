@@ -73,7 +73,7 @@
         <footer>
             <p class="copyright align-center">
                 Made by
-                <a href="https://BTU.PP.UA/">BTU.PP.UA</a>
+                <a href="https://api.bugjava.cn/">包子API</a>
             </p>
         </footer>
 
@@ -84,7 +84,7 @@ function getUrlParam(name){
     var r = window.location.search.substr(1).match(reg);
     if (r!=null) return unescape(r[2]); return null;
 }
-if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = '1';}else{var p = getUrlParam('p');}
+if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 'img';}else{var p = getUrlParam('p');}
             $.get(p, function (data) {
                 let html = '';
                 document.getElementById('output').innerHTML = '';
