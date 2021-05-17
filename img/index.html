@@ -84,7 +84,7 @@ function getUrlParam(name){
     var r = window.location.search.substr(1).match(reg);
     if (r!=null) return unescape(r[2]); return null;
 }
-if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 'img.txt';}else{var p = getUrlParam('p');}
+if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 'img (1).txt';}else{var p = getUrlParam('p');}
             $.get(p, function (data) {
                 let html = '';
                 document.getElementById('output').innerHTML = '';
@@ -117,6 +117,60 @@ if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 
                 observer.observe();
             });
         </script>
+		<script type="text/javascript">
+			$(function() {
+				var aaaa = getUrlParam("p")
+				if(aaaa == null){
+					aaaa = "img (1).txt"
+				}
+		
+				function getUrlParam(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+					var r = window.location.search.substr(1).match(reg);
+					if (r != null) return unescape(r[2]);
+					return null;
+				}
+		
+				var dizhilujing = GetUrlRelativePath()
+		
+				function GetUrlRelativePath() {
+					var url = document.location.toString();
+					var arrUrl = url.split("//");
+		
+					var start = arrUrl[1].indexOf("/");
+					var relUrl = arrUrl[1].substring(start);
+		
+					if (relUrl.indexOf("?") != -1) {
+						relUrl = relUrl.split("?")[0];
+					}
+					return relUrl;
+				}
+				var dizhi = "http://" + window.location.host + dizhilujing + "?p="
+				var khlmdsz = parseInt(aaaa.match(/\(([^)]*)\)/)[1]); //括号里面的数字
+				console.log(khlmdsz)
+		
+				$(document).keydown(function(event) {
+					if (event.keyCode == 39) { //右键
+					
+						let ymindex = khlmdsz + 1;
+						if (ymindex > 1110) {
+							alert("没了")
+							return;
+						}
+						window.location.href = dizhi + "img (" + ymindex + ").txt"
+					}
+					if (event.keyCode == 37) { //左键
+						let ymindex = khlmdsz - 1;
+						if (ymindex < 1) {
+							alert("没了")
+							return;
+						}
+						window.location.href = dizhi + "img (" + ymindex + ").txt"
+					}
+				});
+		
+			})
+		</script>
         <!--</body>-->
     </body>
 </html>
