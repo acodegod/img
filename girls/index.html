@@ -82,7 +82,7 @@ function getUrlParam(name){
     var r = window.location.search.substr(1).match(reg);
     if (r!=null) return unescape(r[2]); return null;
 }
-if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 'img.txt';}else{var p = getUrlParam('p');}
+if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 'girl%20(1).txt';}else{var p = getUrlParam('p');}
             $.get(p, function (data) {
                 let html = '';
                 document.getElementById('output').innerHTML = '';
