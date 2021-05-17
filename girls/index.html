@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kylelogue/mustard-ui/dist/css/mustard-ui.min.css" />
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			$(function(){
 				$('html, body').animate({
 						scrollTop: $('section:first-of-type').offset().top,
@@ -18,6 +18,16 @@
 					300,
 				);
 			})
+		</script> -->
+		<script type="text/javascript">
+			$(function() {
+				$("#kongbai").attr("style","height:960px")
+				$('html, body').animate({
+						scrollTop: $('section:first-of-type').offset().top,
+					},
+					300,
+				);
+			});
 		</script>
 		<script>
 			$(document).ready(function() {
@@ -79,6 +89,7 @@
 				<i>No images can be shown.</i>
 			</div>
 		</section>
+		<div id="kongbai"></div>
 		<footer>
 			<p class="copyright align-center">
 				Made by
@@ -137,7 +148,7 @@
 		<script type="text/javascript">
 			$(function() {
 				var aaaa = getUrlParam("p")
-				if(aaaa == null){
+				if (aaaa == null) {
 					aaaa = "girl (1).txt"
 				}
 
@@ -181,12 +192,17 @@
 							return;
 						}
 						window.location.href = dizhi + "girl (" + ymindex + ").txt"
-						
+
 					}
 				});
 
 			})
-
+		</script>
+		<script type="text/javascript">
+			$('img').load(function() {
+				// 加载完成  
+				  $("#kongbai").attr("style","height:0px")
+			});
 		</script>
 		<!--</body>-->
 	</body>

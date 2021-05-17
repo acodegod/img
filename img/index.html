@@ -12,13 +12,14 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 		<script type="text/javascript">
-			$(function(){
+			$(function() {
+				$("#kongbai").attr("style","height:960px")
 				$('html, body').animate({
 						scrollTop: $('section:first-of-type').offset().top,
 					},
 					300,
 				);
-			})
+			});
 		</script>
         <script>
             $(document).ready(function () {
@@ -156,7 +157,6 @@ if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 
 				}
 				var dizhi = "http://" + window.location.host + dizhilujing + "?p="
 				var khlmdsz = parseInt(aaaa.match(/\(([^)]*)\)/)[1]); //括号里面的数字
-				console.log(khlmdsz)
 		
 				$(document).keydown(function(event) {
 					if (event.keyCode == 39) { //右键
@@ -179,6 +179,12 @@ if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 
 				});
 		
 			})
+		</script>
+		<script type="text/javascript">
+			$('img').load(function() {
+				// 加载完成  
+				  $("#kongbai").attr("style","height:0px")
+			});
 		</script>
         <!--</body>-->
     </body>
