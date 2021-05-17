@@ -3,7 +3,6 @@
     <head>
         <title>图片一览</title>
         <meta charset="utf-8" />
-        <meta name="referrer" content="no-referrer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="dns-prefetch" href="https://cdn.jsdelivr.net/" />
         <link rel="preload" href="https://cdn.jsdelivr.net/gh/kylelogue/mustard-ui/dist/css/mustard-ui.min.css" as="style" />
@@ -104,7 +103,7 @@ if(typeof getUrlParam('p') === 'undefined'|| getUrlParam('p') === null){var p = 
           <div class="panel-head">
             <p>${title}(${index})</p>
           </div>
-          <img class="lozad" data-src="${item}" alt="${index}" referrerpolicy="no-referrer" />
+          <img class="lozad" data-src="${item}" alt="${index}"/>
           <div class="panel-footer">
             <button onclick="window.open('${item}')" class="button-primary right">查看图片</button>
           </div>
