@@ -82,6 +82,7 @@
 				<i>No images can be shown.</i>
 			</div>
 		</section>
+		<div id="kongbai"></div>
 		<footer>
 			<p class="copyright align-center">
 				Made by
@@ -191,10 +192,12 @@
 			})
 		</script>
 		<script type="text/javascript">
-			$('img').on('load', function() {
+			window.onload = function(){
+				setTimeout(function() {
 				// 加载完成  
 				$("#kongbai").attr("style", "height:0px")
-			});
+			},2000)
+			}
 		</script>
 		<!--</body>-->
 	</body>
