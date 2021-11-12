@@ -67,7 +67,7 @@ $(() => {
  	        }else{
  	        document.querySelector('.container').classList.add('start')
  	        var type = $('#type').val();
- 	        if(type =='qihoo'|type =='muke'|type =='gtimg'|type =='catbox'|type =='vxichina'){var api = 'https://www.hualigs.cn/api/upload?token=8ff730a4dc52360c26854111c794742b&apiType='}else{var api = 'https://image.kieng.cn/upload.html?type='};
+ 	        if(type =='qihoo'|type =='muke'|type =='gtimg'|type =='catbox'|type =='vxichina'){var api = 'https://www.hualigs.cn/api/upload?token=8ff730a4dc52360c26854111c794742b&apiType='}else{var api = 'https://image.kieng.cn/upload.html?key=DAB9D78B-D1C4-69A1-D1D6-8A49A36B9216&type='};
             let formData = new FormData();
             formData.append('image', files[i]);
             let randomClass = Date.now().toString(36);
